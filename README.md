@@ -5,6 +5,7 @@ The Following Shiny App allows you to:
 - Designate a Stock Budget for purchasing single Stocks
 - Show you available stocks within your budget
 - Graph time series trend of a chosen stock within your budget
+- Feature to select specific date range of a stock
 - View other information (Industry, Sector, etc.) about your selected stock
 
 How to Use:
