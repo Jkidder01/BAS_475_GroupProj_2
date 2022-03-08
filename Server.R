@@ -1,6 +1,6 @@
 function(input, output, session) {
   
-  # You can access the values of the second widget with input$slider2, e.g.
+  # You can access the values of the widget with input$slider1, e.g.
   output$range <- renderPrint({ input$slider1 })
   stock_range <- reactive({
     cbind(input$slider1[1], input$slider1[2])
