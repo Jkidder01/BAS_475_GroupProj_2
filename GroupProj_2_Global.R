@@ -1,7 +1,7 @@
 library(fpp3)
 library(shiny)
 library(dplyr)
-
+library(readr)
 
 stocks <- read_csv("nyse_stocks.csv.zip")
 
