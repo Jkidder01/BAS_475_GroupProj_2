@@ -19,6 +19,23 @@ function(input, output, session) {
   })
  
   
+    symbol<- 'AAL'
+    filtered_stock  <- stocks[stocks$symbol == input$stock_selected,]
+    
+    ggplot(filtered_stock, aes(date, close)) +
+      geom_line()+
+      labs(title = input$stock_selected)
+      
+    
+    # You can access the values of the widget with input$slider1, e.g.
+    output$range <- renderPrint({ input$slider1 })
+    
+    
+    
+  }
+
+
+  
 
   
 }
