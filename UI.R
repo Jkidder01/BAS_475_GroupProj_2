@@ -11,6 +11,9 @@ fluidPage(
            textOutput("SliderText"),
            uiOutput("dropdown"),
            plotOutput("stockplot"),
+           
+           dateRangeInput("daterange", label = h3("Stock History Range"), start = min(stocks$date), end = max(stocks$date), min = min(stocks$date), max = max(stocks$date)),
+           
            tableOutput("stocktable")
     )
   )
