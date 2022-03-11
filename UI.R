@@ -10,7 +10,8 @@ fluidPage(
            
            textOutput("SliderText"),
            uiOutput("dropdown"),
-           plotOutput("stockplot")
+           plotOutput("stockplot"),
+           tableOutput("stocktable")
     )
   )
 )

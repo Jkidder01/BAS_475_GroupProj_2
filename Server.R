@@ -31,6 +31,9 @@ function(input, output, session) {
     
   }) 
    
+  output$stocktable <- renderTable({
+    unique(stocks[stocks$symbol == input$stock_selected, c('city','state','gics_sector')])
+  })
     
 
 
