@@ -14,7 +14,7 @@ function(input, output, session) {
     
     selectInput(
     inputId = "stock_selected",
-    label = "Select a Stock:",
+    label = h3("Select a Stock:"),
     choices = unique(budget_stock)
     )
    
