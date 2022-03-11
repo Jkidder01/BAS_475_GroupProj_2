@@ -9,9 +9,9 @@ fluidPage(
                        max = ceiling(max(stocks$close)), value = c(200, 1000)),
            
            textOutput("SliderText"),
-           uiOutput("dropdown")
+           uiOutput("dropdown"),
+           plotOutput("stockplot")
     )
-    
   )
 )
 
