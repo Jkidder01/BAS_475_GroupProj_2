@@ -25,7 +25,7 @@ dashboardPage(
       ),
                 
 tabItem(tabName = "widgets",
-     h3("Widgets tab content",
+     h3("Stock Data",
         fluidRow(
           
           box(
