@@ -1,26 +1,50 @@
-fluidPage(
-  titlePanel("Stock Picker"),
+dashboardPage(
+  dashboardHeader(title = "Stock Picker"),
   
-  fluidRow(
+  dashboardSidebar(
+    sidebarMenu(
+      menuItem("Prefered Limits", tabName = "dashboard", icon = icon("dashboard")),
+      menuItem("Stock Data", tabName = "widgets", icon = icon("th"))
+    )
+  ),
+  dashboardBody(
+    tabItems(
+      tabItem(tabName = "dashboard",
+              fluidRow(
+                
+                box(
+                  sliderInput("slider1", label = h3("Available Budget"), min = floor(min(stocks$close)), 
+                                max = ceiling(max(stocks$close)), value = c(200, 1000))
+                  ),
+                
+                box(
+                  dateRangeInput("daterange", label = h3("Stock History Range"), start = min(stocks$date), end = max(stocks$date), min = min(stocks$date), max = max(stocks$date))
+                ),
 
-    column(6,
-           
-           sliderInput("slider1", label = h3("Available Budget"), min = floor(min(stocks$close)), 
-                       max = ceiling(max(stocks$close)), value = c(200, 1000)),
-           
-           textOutput("SliderText"),
-           
-           uiOutput("dropdown"),
-           
-           plotOutput("stockplot"),
-           
-           dateRangeInput("daterange", label = h3("Stock History Range"), start = min(stocks$date), end = max(stocks$date), min = min(stocks$date), max = max(stocks$date)),
-           
-           headerPanel(h3("Stock Information")),
-           
-           tableOutput("stocktable")
-           
+              )
+      ),
+                
+tabItem(tabName = "widgets",
+     h3("Widgets tab content",
+        fluidRow(
+          
+          box(
+            (uiOutput("dropdown"))
+          ),
+          
+          box(
+            (plotOutput("stockplot"))
+          ),
+          
+          box(
+            box(tableOutput("stocktable"))
+          ),
+          
+        )
+     
+        ))
+
+      )
     )
   )
-)
 
