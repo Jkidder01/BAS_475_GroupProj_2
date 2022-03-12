@@ -10,7 +10,9 @@ The Following Shiny App allows you to:
 
 How to Use:
 1. Download and run the app
-2. Set budget (maximum and minimum price) prefered for purchasing single stock
-3. Choose a stock within your selected budget from the produced drop-down menu
-5. The application will procede to graph time ordered data regarding your selected stock along with other variable information relevant to said stock
-6. If desired you may change the dates of interest for your selected stock
+2. Go to the Prefered Limits Tab
+3. Set budget (maximum and minimum price) prefered for purchasing single stock
+4. Set the date range you wish to see analyzed for any given stock
+5. Go to the Stock Data Tab
+6. Choose a stock within your selected budget from the produced drop-down menu
+7. The application will procede to graph time ordered data regarding your selected stock along with other variable information relevant to said stock
